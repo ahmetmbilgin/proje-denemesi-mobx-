@@ -4,6 +4,7 @@ import Coffees from './pages/coffees';
 import Foods from './pages/foods';
 import HomePage from './pages/homePage';
 import Login from './pages/login/login';
+import MainPage from './pages/mainPage';
 import NoPage from './pages/noPage';
 import Signup from './pages/signup/signup';
 import Snacks from './pages/snacks';
@@ -13,7 +14,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />}>
+        <Route path="/" element={<MainPage />}>
+          <Route path="/" element={<HomePage />} />
           <Route path="user/:id" element={<User />} />
           <Route path='login' element={<Login />} />
           <Route path='signin' element={<Signup />} />
