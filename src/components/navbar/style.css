@@ -1,0 +1,98 @@
+.navbar {
+    height: 80px;
+    background-color: black;
+    display: flex;
+    text-align: center;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+    color: #eee;
+    border-radius: 0px 0px 25px 25px;
+    margin-bottom: 50px;
+}
+
+.hermes {
+    font-size: 32px;
+    font-weight: 700px;
+    color: aqua;
+}
+
+.navbar .login-signin {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    flex-direction: row;
+    width: 150px;
+    gap: 10px;
+}
+
+.navbar .login-signin li {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.navbar .links span{
+    width:150px ;
+    height: 20px;
+}
+
+.navbar .login-signin li a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 40px;
+    font-weight: 600;
+}
+
+.navbar .login-signin li:hover {
+    background-color: aqua;
+}
+
+.navbar .login-signin li>a:hover {
+    color: black;
+}
+
+.links {
+    display: flex;
+    color: #eee;
+    width: 900px;
+    justify-content: space-between;
+}
+
+.links .pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.links .pages li:hover {
+    background-color: #eee;
+    color: black;
+    border-radius: 20px;
+}
+
+.links .pages li a {
+    color: #eee;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+.links .pages li a:hover {
+    color: black;
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.links .pages .home a {
+    color: red
+}
+
+.links .pages .home a:hover {
+    color: red
+}
