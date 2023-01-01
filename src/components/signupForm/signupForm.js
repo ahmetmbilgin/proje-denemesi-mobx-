@@ -18,7 +18,7 @@ const SignupForm = () => {
 
         RestApi.üyeleriGetir()
             .then(üyeler => {
-                setUserList(üyeler.data)
+                setUserList(üyeler.data);
             })
             .catch(error => alert(error));
     }, [])
@@ -37,19 +37,19 @@ const SignupForm = () => {
         if (verifyPassword === newUser.password) {
             if (Object.values(newUser).every(value => value)) {
                 if (usernameControl(newUser.username)) {
-                    setUsernameExis(true)
+                    setUsernameExis(true);
                     setLoading(true);
                     RestApi.üyeKaydet(newUser)
                         .then(() => {
                             setNewUser({ username: '', password: '', name: '', surname: '', email: '' });
                             setSignInError({ username: true, password: true, name: true, surname: true, email: true });
-                            setVeriyfyPassword('')
+                            setVeriyfyPassword('');
                         })
                         .catch(error => alert(error))
                         .finally(() => {
-                            setLoading(false)
-                            setLoading2(true)
-                            setTimeout(()=>setLoading2(false),1000)
+                            setLoading(false);
+                            setLoading2(true);
+                            setTimeout(()=>setLoading2(false),1000);
                         });
                 } else {
                     setUsernameExis(false);
@@ -85,8 +85,8 @@ const SignupForm = () => {
                     <div style={{ gap: 10, width: 250, display: "flex", flexDirection: "column" }}>
                         <input onChange={(e) => setVeriyfyPassword(e.target.value)} value={verifyPassword} placeholder="verify password" type="password" />
                         <button onClick={(e) => {
-                            e.preventDefault()
-                            kayitOl()
+                            e.preventDefault();
+                            kayitOl();
                         }}>Kayıt Ol</button>
                     </div>
                 </div>

@@ -6,20 +6,20 @@ import RestApi from "../../RestApi";
 
 const LoginForm = () => {
 
-    const [userList, setUserList] = useState([])
-    const [user, setUser] = useState({ username: '', password: '' })
-    const [userError, setUserError] = useState({ username: true, password: true })
-    const [userConfirm, setUserConfirm] = useState(true)
+    const [userList, setUserList] = useState([]);
+    const [user, setUser] = useState({ username: '', password: '' });
+    const [userError, setUserError] = useState({ username: true, password: true });
+    const [userConfirm, setUserConfirm] = useState(true);
 
     useEffect(() => {
         RestApi.üyeleriGetir()
             .then(cevap => {
-                setUserList(cevap.data)
+                setUserList(cevap.data);
             })
-            .catch(error => alert(error))
+            .catch(error => alert(error));
     }, [])
 
-    const filtering = (username, password) => userList.filter(user => user.username === username && user.password === password).length > 0
+    const filtering = (username, password) => userList.filter(user => user.username === username && user.password === password).length > 0;
     const userSearch = (username, password) => {
         if (filtering(username, password)) {
             setUserConfirm(false);
@@ -27,7 +27,7 @@ const LoginForm = () => {
             localStorage.setItem("username", username);
             return true;
         } else {
-            return false
+            return false;
         }
     }
 
