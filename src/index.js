@@ -10,7 +10,7 @@ import Login from './pages/login/login';
 import NoPage from './pages/noPage';
 import Signup from './pages/signup/signup';
 import Snacks from './pages/snacks';
-import User from './pages/user';
+import User from './pages/user/user';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

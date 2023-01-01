@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import { useParams } from "react-router-dom";
-import Spinner from "../components/spinner/Spinner";
+import Spinner from "../../components/spinner/Spinner";
 
 const User = () => {
 

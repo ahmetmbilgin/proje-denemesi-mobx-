@@ -12,9 +12,9 @@ const LoginForm = () => {
     const [userConfirm, setUserConfirm] = useState(true);
 
     useEffect(() => {
-        RestApi.üyeleriGetir()
-            .then(cevap => {
-                setUserList(cevap.data);
+        RestApi.getAllUsers()
+            .then(response => {
+                setUserList(response.data);
             })
             .catch(error => alert(error));
     }, [])

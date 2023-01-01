@@ -16,30 +16,30 @@ const SignupForm = () => {
 
     useEffect(() => {
 
-        RestApi.üyeleriGetir()
-            .then(üyeler => {
-                setUserList(üyeler.data);
+        RestApi.getAllUsers()
+            .then(allUsers => {
+                setUserList(allUsers.data);
             })
             .catch(error => alert(error));
     }, [])
 
     const usernameControl = (username) => {
-        const üyeIsimleri = userList.map(üyeObjesi => üyeObjesi.username);
-        if (üyeIsimleri.some(isim => isim === username)) {
+        const userNames = userList.map(userObject => userObject.username);
+        if (userNames.some(name => name === username)) {
             return false;
         } else {
             return true;
         }
     }
 
-    const kayitOl = (e) => {
+    const signup = (e) => {
         setSignInError(newUser);
         if (verifyPassword === newUser.password) {
             if (Object.values(newUser).every(value => value)) {
                 if (usernameControl(newUser.username)) {
                     setUsernameExis(true);
                     setLoading(true);
-                    RestApi.üyeKaydet(newUser)
+                    RestApi.saveUser(newUser)
                         .then(() => {
                             setNewUser({ username: '', password: '', name: '', surname: '', email: '' });
                             setSignInError({ username: true, password: true, name: true, surname: true, email: true });
@@ -86,7 +86,7 @@ const SignupForm = () => {
                         <input onChange={(e) => setVeriyfyPassword(e.target.value)} value={verifyPassword} placeholder="verify password" type="password" />
                         <button onClick={(e) => {
                             e.preventDefault();
-                            kayitOl();
+                            signup();
                         }}>Kayıt Ol</button>
                     </div>
                 </div>

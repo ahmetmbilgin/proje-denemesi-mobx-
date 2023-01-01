@@ -1,18 +1,18 @@
 import axios from "axios";
 
-const url = 'http://localhost:5000/user/';
+const url = 'http://localhost:4600/user/';
 
 class RestApi {
-    async üyeGetir(username) {
+    async getUser(username) {
         await axios.get(url + username);
     }
 
-    async üyeleriGetir() {
+    async getAllUsers() {
         return await axios.get(url);
     }
 
-    async üyeKaydet(üyeObjesi) {
-        await axios.post(url, üyeObjesi);
+    async saveUser(userObject) {
+        await axios.post(url, userObject);
     }
 }
 export default new RestApi();
