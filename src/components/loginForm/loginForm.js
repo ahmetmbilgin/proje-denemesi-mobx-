@@ -1,4 +1,3 @@
-import { observer } from "mobx-react";
 import { useEffect, useState } from "react";
 import 'react-responsive-modal/styles.css';
 import { Link } from "react-router-dom";
