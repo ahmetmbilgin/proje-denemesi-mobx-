@@ -1,4 +1,3 @@
-import { observer } from "mobx-react";
 import { useEffect, useState } from "react";
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
@@ -103,4 +102,4 @@ const SignupForm = () => {
     )
 }
 
-export default observer(SignupForm);
+export default SignupForm;

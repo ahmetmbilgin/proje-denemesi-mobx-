@@ -57,4 +57,4 @@ const LoginForm = () => {
     </>)
 }
 
-export default observer(LoginForm);
+export default LoginForm;
