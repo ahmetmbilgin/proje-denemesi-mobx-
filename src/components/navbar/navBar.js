@@ -59,7 +59,7 @@ const Navbar = () => {
                 </ul>
             </div>
         </div>
-        <Outlet />
+        {/* <Outlet /> */}
     </>
     )
 }
