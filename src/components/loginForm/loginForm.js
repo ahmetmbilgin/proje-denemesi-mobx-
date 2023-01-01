@@ -18,8 +18,6 @@ const LoginForm = () => {
                 setUserList(cevap.data)
             })
             .catch(error => alert(error))
-            // .finally(() => setLoading(false));
-
     }, [])
 
     const filtering = (username, password) => userList.filter(user => user.username === username && user.password === password).length > 0
