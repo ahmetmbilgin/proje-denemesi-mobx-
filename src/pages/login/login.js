@@ -1,9 +1,8 @@
-import { observer } from "mobx-react";
 import LoginForm from "../../components/loginForm/loginForm";
-import Fruits from '../../images/fruits.jpg'
-import './style.css'
-const Login = () => {
+import Fruits from '../../images/fruits.jpg';
+import './style.css';
 
+const Login = () => {
     return (
         <div className="login-container">
             <LoginForm />
@@ -12,4 +11,4 @@ const Login = () => {
     )
 }
 
-export default observer(Login);
+export default Login;

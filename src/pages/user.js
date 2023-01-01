@@ -11,7 +11,7 @@ const User = () => {
 
     useEffect(() => {
         setLoading(true);
-        setTimeout(() => setLoading(false), 2000)
+        setTimeout(() => setLoading(false), 1000);
     }, [])
 
     return (

@@ -2,9 +2,9 @@ import { makeAutoObservable } from 'mobx';
 
 class GlobalStates {
     
-    username = ''
+    username = '';
     setUsername(newUsername) {
-        this.username = newUsername
+        this.username = newUsername;
     }
 
     constructor() {

@@ -12,7 +12,7 @@ const SignupForm = () => {
     const [usernameExis, setUsernameExis] = useState(true);
     const [loading, setLoading] = useState(false);
     const [loading2, setLoading2] = useState(false);
-    const [userList, setUserList] = useState([])
+    const [userList, setUserList] = useState([]);
 
     useEffect(() => {
 
