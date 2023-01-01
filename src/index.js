@@ -20,7 +20,7 @@ root.render(
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="user/:id" element={<User />} />
             <Route exact path='login' element={<Login />} />
-            <Route exact path='signin' element={<Signup />} />
+            <Route exact path='signup' element={<Signup />} />
             <Route exact path='foods' element={<Foods />} />
             <Route exact path='coffees' element={<Coffees />} />
             <Route exact path='snacks' element={<Snacks />} />

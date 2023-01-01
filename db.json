@@ -231,6 +231,14 @@
       "surname": "asd",
       "email": "asda",
       "id": 29
+    },
+    {
+      "username": "musti123",
+      "password": "123",
+      "name": "musti",
+      "surname": "alışmış",
+      "email": "must@yah.com",
+      "id": 30
     }
   ]
 }
